@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "version": "1.0.0.2",
+    "name": "DiriverJob's Preview",
+    "description": "『ドライバーのおしごと』のプレビュー",
+    "icons": {
+        "32": "icons/2ball_32.png",
+        "48": "icons/2ball_48.png",
+        "128": "icons/2ball_128.png"
+    },
+    "content_scripts":[
+        {
+          "run_at": "document_end",
+          "matches": ["https://www36.rpm-sys.jp/RPMv4-artista/index.cfm?fuseaction=Job.Update&selected_tab=tab_JobDetail*"],
+          "js": ["js/content_scripts.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": true
+    },
+    "page_action": {
+        "default_title": "『ドライバーのおしごと』での見た目を確認します",
+        "default_icon": {"19": "icons/2ball_19.png"}
+    },
+    "permissions": [
+            "tabs",
+            "activeTab",
+            "declarativeContent"
+        ],
+    "author": "MTZNo"
+}

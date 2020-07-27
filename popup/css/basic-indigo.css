@@ -1,0 +1,464 @@
+@charset "utf-8";
+
+body{
+	border-top:5px solid #3F51B5;
+}
+
+/* パーツ調整 ---------------------------- */
+input:focus,
+select:focus,
+textarea:focus{
+	background:#FFECB3;
+}
+/* checkboxボタン化-checkマーク無 */
+.buttonCheck input[type=checkbox]:checked + label{
+    	border: 1px solid #FFD54F;
+	background:#FFE082;
+}
+/* checkboxボタン化-checkマークあり */
+.checkmark label:before {
+	border-right: 3px solid #FF0000;
+	border-bottom: 3px solid #FF0000;
+}
+/* radioボタン化 */
+.buttonRadio input[type="radio"]:checked + label {
+    	border: 1px solid #FFD54F;
+	background:#FFE082;
+}
+/* 必須・任意マーク */
+span.required{
+	color:#D50000;
+}
+span.option{
+	color:#666666;
+}
+/* サブ色アイコン */
+span.icon_sub{
+	color:#FFFFFF;
+	background:#FFB300;
+}
+
+/* サイズ・色調整 ---------------------------- */
+.cl-sub{color:#FFB300;}
+
+/*-------------------------------------------
+	グローバルメニュー
+-------------------------------------------*/
+.mod_nav{
+	background:#3F51B5;
+}
+.mod_nav ul{
+	border-left:1px solid #1A237E;
+	border-right:1px solid #5C6BC0;
+}
+.mod_nav ul li{
+	border-left:1px solid #5C6BC0;
+	border-right:1px solid #1A237E;
+}
+.mod_nav ul a:hover{
+	background:#5C6BC0;
+}
+@media screen and (max-width:768px){
+.mod_nav p.navtitle{
+	background:#3F51B5;
+	}
+.mod_nav ul li{
+	border:none;
+	border-bottom:1px dotted #CCCCCC;
+	}
+}
+/*-------------------------------------------
+	メインレイアウト
+-------------------------------------------*/
+#side{
+	background:#ECEFF1;
+}
+
+/*-------------------------------------------
+	メインビジュアル
+-------------------------------------------*/
+/* bxslider調整 */
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active{
+	background:#FFD54F;
+}
+/*-------------------------------------------
+	TOPのみ機能
+-------------------------------------------*/
+.topsearch h2,
+.jobs h2,
+.checkjob h2,
+#news h2,
+#petit h2,
+#osusume h2{
+	color:#333333;
+	background:#ECEFF1;
+}
+
+/* TOP検索メニュー */
+.topsearch .bt_search input{
+	background:url(../img/common/ico_search_wh.png) #3F51B5 18px 8px no-repeat;
+}
+.topsearch .bt_search input:hover{
+	background:url(../img/common/ico_search_wh.png) #8C9EFF 18px 8px no-repeat;
+}
+
+/* TOPプチ特集 */
+#petit h3{
+	color:#1A237E;
+}
+#petit div p.link a{
+	background:#3F51B5;
+}
+
+/* TOPおすすめ（こだわり） */
+#osusume li a:before{
+	color:#FFFFFF;
+	background:#EF5350;
+}
+
+/* TOPお知らせ */
+#news li a:after{
+	border-top:solid 2px #3F51B5;
+	border-right:solid 2px #3F51B5;
+}
+
+/* TOP新着・急募 */
+.jobs ul li a h4{
+	color:#1A237E;
+}
+.jobs ul.data li b{
+	color:#1A237E;
+}
+.jobs span.go-detail{
+	background:#3F51B5;
+}
+
+
+/*-------------------------------------------
+	サイドメニュー
+-------------------------------------------*/
+.col-2 #side ul.function li.search a,
+.col-2 #side ul.function li.regist a{
+	background:#3F51B5;
+	border-top:3px solid #5C6BC0;
+	border-left:3px solid #5C6BC0;
+	border-right:2px solid #1A237E;
+	border-bottom:2px solid #1A237E;
+}
+.col-2 #side ul.function li.login a,
+.col-2 #side ul.function li.logout a{
+	color:#3F51B5;
+	border:3px solid #3F51B5;
+}
+
+/* サイド-フリーコンテンツ・オフィス表示 */
+.col-2 #side ul.contents li a:hover,
+.col-2 #side ul.office li a:hover{
+	background:#C5CAE9;
+}
+.col-2 #side ul.contents li a:after,
+.col-2 #side ul.office li a:after{
+	border-top:solid 2px #3F51B5;
+	border-right:solid 2px #3F51B5;
+}
+
+/* サイド-人気ワード */
+.col-2 #side #menu-word h3{
+	border-bottom:1px solid #90CAF9;
+	background:url(../img/common/ico_word.png) 15px 4px #90CAF9 no-repeat;
+}
+
+/* サイド-クイックアクセス */
+.col-2 #side #menu-quick h3{
+	background:url(../img/common/ico_quick.png) 10px 4px #90CAF9 no-repeat;
+}
+.col-2 #side #menu-quick h4{
+}
+
+/* サイド-最近見たお仕事 */
+.col-2 #side #menu-history h3{
+	background:url(../img/common/ico_history.png) 10px 4px #90CAF9 no-repeat;
+}
+.col-2 #side #menu-history p.no-history a{
+	color:#FFFFFF;
+	background:#3F51B5;
+}
+
+/*-------------------------------------------
+	TOP以外共通
+-------------------------------------------*/
+@media screen and (max-width:768px){
+h1.title{
+	border-bottom:3px solid #3F51B5;
+	}
+}
+
+/* エラー・通知メッセージ */
+.notice{
+	background:#FFFFCC;
+	border-top:1px solid #F0E68C;
+	border-bottom:1px solid #F0E68C;
+}
+.notice h3{
+	color:#D50000;
+}
+.alert{
+	color:#D50000;
+}
+
+/* ぱんくず */
+#pankuzu li.active{
+	border-bottom:3px solid #FFC107;
+}
+
+/*-------------------------------------------
+	検索リスト
+-------------------------------------------*/
+#search-list .wide{
+	background:#F9F9F9;
+}
+
+/* リスト上部検索メニュー */
+#search-list p.search-more{
+	color:#FFFFFF;
+	background:#444444;
+}
+#search-list p.search-more span{
+	color:#444444;
+	background:#FFFFFF;
+}
+#search-list p.search-more:hover{
+	color:#FFFFFF;
+	background:#666666;
+}
+#search-list .wide .topsearch{
+	border-right:1px solid #DCDCDC;
+	border-left:1px solid #DCDCDC;
+	border:5px solid #3F51B5;
+	box-shadow:1px 1px 2px #666666;
+}
+
+/* 検索リストサムネイル */
+#search-list .search-list-box h2{
+	background:#3F51B5;
+	border-bottom:3px solid #5C6BC0;
+}
+#search-list .search-list-box h2 a{
+	color:#FFFFFF;
+}
+#search-list .search-list-box h2 a:hover{
+	background:#5C6BC0;
+}
+
+
+#search-list .search-list-box h3 a:hover{
+	color:#5C6BC0;
+}
+#search-list .search-list-box h3 a{
+	color:#3F51B5;
+}
+#search-list .search-list-box .number{
+	background:#FFE082;
+}
+#search-list .search-list-box th{
+	background:#E6E6E6;
+}
+#search-list .search-list-box .act-button{
+	background:#F9F9F9;
+	border-top:1px dotted #999999;
+}
+
+#search-list .search-list-box .act-button a.detail{
+	background:#FFFFFF;
+	border:2px solid #CCCCCC;
+}
+#search-list .search-list-box .act-button a.detail:hover{
+	color:#3F51B5;
+	border:2px solid #3F51B5;
+}
+#search-list .search-list-box .act-button a.detail:after{
+	border-top:solid 2px #3F51B5;
+	border-right:solid 2px #3F51B5;
+}
+
+#search-list .search-list-box .act-button a.oubo{
+	color:#FFFFFF;
+	background:#d50000;
+	border-top:2px solid #f44336;
+	border-left:2px solid #f44336;
+	border-bottom:2px solid #b71c1c;
+	border-right:2px solid #b71c1c;
+}
+#search-list .search-list-box .act-button a.oubo:hover{
+	background:#ff5252;
+	border:2px solid #ff5252;
+}
+
+/* ページャー */
+#search-list nav.pager li.nxt a:after{
+	border-top:solid 2px #3F51B5;
+	border-right:solid 2px #3F51B5;
+}
+#search-list nav.pager li.prv a:after{
+	border-top:solid 2px #3F51B5;
+	border-right:solid 2px #3F51B5;
+}
+/*-------------------------------------------
+	求人詳細ページ
+-------------------------------------------*/
+#search-detail .search-detail-box h2{
+	color:#FFFFFF;
+	background:#616161;
+}
+/* 案件NO */
+#search-detail .search-detail-box .number{
+	background:#FFE082;
+}
+
+/* 応募ボタン・電話番号 */
+#search-detail .act-button{
+	background:#F9F9F9;
+	border:3px solid #FFFFFF;
+}
+#search-detail .act-button p.oubo a{
+	color:#FFFFFF;
+	background:#d50000;
+	border:3px solid #d50000;
+	border-top:2px solid #f44336;
+	border-left:2px solid #f44336;
+	border-bottom:2px solid #b71c1c;
+	border-right:2px solid #b71c1c;
+}
+#search-detail .act-button p.oubo a:hover{
+	background:#ff5252;
+	border:2px solid #ff5252;
+}
+
+/* ここがポイント！ */
+#search-detail .search-detail-box .point{
+	border:3px solid #FFD54F;
+}
+#search-detail .search-detail-box .point h4{
+	background:#FFE082;
+	color:#F57F17;
+}
+
+
+/*-------------------------------------------
+	登録フォーム
+-------------------------------------------*/
+#regist table.full th{
+	color:#FFFFFF;
+	background:#616161;
+	border-top:1px solid #999999;
+	border-bottom:1px solid #000000;
+}
+#regist table td{
+	background:#F9F9F9;
+	border-top:1px solid #FFFFFF;
+	border-bottom:1px solid #CCCCCC;
+}
+#regist div.submit input{
+	color:#FFFFFF;
+	background:#d50000;
+	border:3px solid #d50000;
+	border-top:2px solid #f44336;
+	border-left:2px solid #f44336;
+	border-bottom:2px solid #b71c1c;
+	border-right:2px solid #b71c1c;
+}
+
+/*-------------------------------------------
+	応募フォーム
+-------------------------------------------*/
+#oubo table th,
+#inquiry-form table th{
+	color:#FFFFFF;
+	background:#616161;
+	border-top:1px solid #999999;
+	border-bottom:1px solid #000000;
+}
+#oubo table td,
+#inquiry-form table td{
+	background:#F9F9F9;
+	border-bottom:1px solid #CCCCCC;
+	border-top:1px solid #FFFFFF;
+	border-bottom:1px solid #CCCCCC;
+}
+
+#oubo div.submit input,
+#inquiry-form div.submit input{
+	color:#FFFFFF;
+	background:#d50000;
+	border:3px solid #d50000;
+	border-top:3px solid #f44336;
+	border-left:3px solid #f44336;
+	border-bottom:3px solid #b71c1c;
+	border-right:3px solid #b71c1c;
+}
+#oubo div.submit input:hover,
+#inquiry-form div.submit input:hover{
+	background:#ff5252;
+	border:3px solid #ff5252;
+}
+
+/*-------------------------------------------
+	コンテンツ
+-------------------------------------------*/
+#common h2{
+	background:#F9F9F9;
+	border-bottom:3px solid #7986CB;
+}
+@media screen and (max-width:768px){
+	#common h2{
+	border-bottom:1px solid #7986CB;
+	}
+}
+#common .box-a p.link a:after,
+#common .box-b p.link a:after,
+#common .box-c p.link a:after{
+	border-top:solid 2px #FFC107;
+	border-right:solid 2px #FFC107;
+}
+#common .box-a p.link a:hover,
+#common .box-b p.link a:hover,
+#common .box-c p.link a:hover{
+	background:#FFFDE7;
+}
+
+/*-------------------------------------------
+	オフィス・イベント
+-------------------------------------------*/
+
+#common #office-tab li a.active{
+	font-weight:bold;
+}
+#common #office-tab li a.active:before{
+	color:#FFC107;
+}
+#common .table-office td.title strong{
+ 	border-left:5px solid #3F51B5;
+}
+#common .table-office td a:after{
+	border-top:solid 2px #3F51B5;
+	border-right:solid 2px #3F51B5;
+}
+.office-exp{
+	border-top:2px solid #FFC107;
+}
+
+
+/*-------------------------------------------
+	フッター
+-------------------------------------------*/
+/* ページ上部へ戻る */
+#page-top a{
+	color:#FFFFFF;
+	background:#666666;
+}
+/* Copyright */
+small{
+	color:#FFFFFF;
+	background:#3F51B5;
+}

@@ -1,0 +1,179 @@
+<html lang="ja">
+    <head>
+        <title></title>
+        <meta name="keywords" content="ドライバーのおしごと">
+    	<meta charset="utf-8"><!-- character -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- Responsive -->
+    	<meta http-equiv="content-script-type" content="text/javascript">
+    	<meta http-equiv="content-style-type" content="text/css">
+    	<meta http-equiv="imagetoolbar" content="no">
+
+        <!--
+        <link rel="stylesheet" type="text/css" href="./css/reset.css">
+         -->
+
+		<!-- default css -->
+		<link rel="stylesheet" type="text/css" href="./css/bxslider.css" media="screen,print">
+		<link rel="stylesheet" type="text/css" href="./css/basic.css?date=20181121194957" media="screen,print">
+		<!-- // default css -->
+
+        <!-- user css -->
+        <link rel="stylesheet" type="text/css" href="./css/driverjobpreview.css" media="screen,print">
+        <!-- // user css -->
+
+		<!-- colored css -->
+		<link rel="stylesheet" type="text/css" href="./css/basic-indigo.css" media="screen,print">
+		<!-- // colored css -->
+
+        <script type="text/javascript" src="./js/jquery-3.4.1.min.js" charset="utf-8"></script>
+
+    </head>
+    <body id="search-detail" class="col-2 right">
+        <div id=reload>再読み込み</div>
+        <div id="main-wrap">
+            <div class="main">
+                <h1 id="title" class="title"></h1>
+                <div class="search-detail-box">
+                    <h2>おしごと概要</h2>
+                        <table>
+                            <p id="job_no" class="number"></p>
+                            <p class="kyujin_top_title">職種: <span id="job_type" class="kyujin_top"></span></p>
+                            <p class="kyujin_top_title">時給: <span id="salary_time" class="kyujin_top"></span></p>
+                            <p class="kyujin_top_title">勤務地: <span id="work_place" class="kyujin_top"></span> &nbsp; &nbsp; &nbsp; <span style="kyujin_top_title">最寄り駅:</span> <span id='closest_station' class="kyujin_top"></span></p>
+                        </table>
+                    <div class="point">
+                        <h4>ここがポイント！</h4>
+                        <p><span id='point'></span></p>
+                    </div>
+                    <!-- 応募ボタン枠 -->
+                    <div class="act-button">
+                        <p class="oubo"><a href="">応募する</a></p>
+                        <p class="tel">09:00～18:00 <span style="font-size: 12px;">(平日)</span><br>
+                        <span class="tel-no">03-6225-0614</span> <span class="tel-no mb"> <a href="">03-6225-0614</a> </span></p>
+                        &nbsp;
+                        <p class="keeplist"><a class="keepjob" href="" data-sgtno="">検討中リストに保存する</a></p>
+                    </div>
+                    <!-- //応募ボタン枠 -->
+                    <p class="clear">&nbsp;</p>
+                    &nbsp;
+                    <h2>おしごと詳細</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>おしごと内容</th>
+                                <td id='work_detail'></td>
+                            </tr>
+                            <tr>
+                                <th>給与</th>
+                                <td>
+                                    <span id='salary_detail'></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>勤務地</th>
+                                <td>
+                                    <span id='work_place_detail'></span><br>
+                                    <br>
+                                    <strong>最寄り駅</strong>: <span id='station'></span><br>
+                                    <strong>アクセス</strong>: <span id='access'></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>勤務日</th>
+                                <td>
+                                    <span id='weekday'></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>勤務時間</th>
+                                <td>
+                                    <strong>1:</strong> <span id='worktime1'></span><br>
+                                    <strong>2:</strong> <span id='worktime2'></span><br>
+                                    <strong>3:</strong> <span id='worktime3'></span><br>
+                                    <br>
+                                    <span id='worktime_detail'></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>休日</th>
+                                <td>
+                                    <span id='holiday'></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>必要免許</th>
+                                <td>
+                                    <span id='required_qualification'></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>歓迎するスキル</th>
+                                <td>
+                                    <span id='recommended_qualification'></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>待遇 / 福利厚生</th>
+                                <td>
+                                    <span id='welfare_benefits'></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>おしごとアピール</th>
+                                <td>
+                                    <span id='presentation'></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    &nbsp; <!-- 応募ボタン枠 -->
+
+                    <div class="act-button">
+                        <p class="oubo"><a href="">応募する</a></p>
+
+                        <p class="tel">09:00～18:00 (平日)<br>
+                        <span class="tel-no"> 03-6225-0614 </span> <span class="tel-no mb"> <a href="">03-6225-0614</a> </span></p>
+                        &nbsp;
+                        <p class="keeplist"><a class="keepjob" href="" data-sgtno="">検討中リストに保存する</a></p>
+                    </div>
+                    &nbsp; <!-- //応募ボタン枠 -->
+
+                    <p class="clear">&nbsp;</p>
+                    &nbsp;
+
+                    <h2>応募について</h2>
+
+                    <h3>応募のながれ</h3>
+
+                    <ol class="kyujin_list">
+                        <li class="kyujin_list"><strong>応募</strong>
+                            <p>まずは、<a class="kyujin_link" href="">お電話</a>または<strong>WEBページ</strong>から応募。<br>
+                                <span style="font-size: 12px;">※ お電話は「<strong>ドライバーのおしごとを見ました</strong>」とお伝えするとスムーズにつながります。<br>
+                                こちらの<strong>おしごとNo.</strong>は「<span style="color:#ff9933;"><strong><span id='job_no2'></strong></span>」です。</span>
+                            </p>
+                        </li>
+                        <li class="kyujin_list">
+                            <strong>担当から連絡</strong>
+                            <p>担当者から<strong>お電話</strong>または<strong>メール</strong>にてご連絡いたします。<br>
+                                <span style="font-size: 12px;">(担当携帯から連絡させていただく場合もございます)</span>
+                            </p>
+                        </li>
+                        <li class="kyujin_list">
+                            <strong>面接</strong>
+                            <p>いよいよ担当者と面接。</p>
+                        </li>
+                    </ol>
+
+                    <div class="act-button">
+                        <p class="oubo"><a href="">応募する</a></p>
+                        <p class="tel">09:00～18:00 (平日)<br>
+                        <span class="tel-no">03-6225-0614</span> <span class="tel-no mb"> <a href="">03-6225-0614</a> </span></p>
+                        <p class="keeplist"><a class="keepjob" href="" data-sgtno="">検討中リストに保存する</a></p>
+                    </div>
+                    <!-- //応募ボタン枠 -->
+                </div>
+            </div>
+        </div><!-- //main-wrap -->
+        <script type="text/javascript" src="./js/driverjobpreview.js" charset="utf-8"></script>
+    </body>
+</html>

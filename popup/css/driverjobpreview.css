@@ -1,0 +1,120 @@
+@charset "UTF-8";
+.clearfix::after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+body {
+    margin: 20px 30px 10px 30px;
+}
+
+.kyujin_list_h3{
+    width: 93% !important;
+    font-size: 14px;
+    background: none;
+    border-bottom: none;
+}
+
+.mod_nav{
+    font-weight:bold;
+}
+
+h1.title{
+    letter-spacing: 0;
+}
+
+.kyujin_top_title{
+    color: #f93;
+    font-weight:bold;
+    font-size: 14px;
+}
+
+.kyujin_top{
+    color: #333333;
+    font-weight:bold;
+    font-size: 18px;
+}
+
+ol.kyujin_list{
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 0;
+}
+ol.kyujin_list{
+    padding-left: 1em;
+}
+li.kyujin_list{
+    text-indent: -1.3em;
+    padding-left: 1.3em;
+}
+li.kyujin_list:before{
+    counter-increment: item;
+    content: counter(item)'.';
+    /* 以下は自由に装飾... */
+    padding-right: .5em;
+    font-weight: bold;
+}
+
+
+h3 {
+    background: #F9F9F9;
+    border-bottom: 3px solid #7986CB;
+}
+
+.act-button {text-align: center;}
+
+.kyujin_link{
+    text-decoration: none;
+    text-decoration: underline;
+    color: #3366FF;
+}
+
+h2.kyujin_list_h2{
+    background: #3F51B5;
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+h3.company{
+    font-weight: bold;
+    border-bottom: 0px solid #FFFFFF;
+    background: none;
+    border-left: solid 3px #010079;
+    padding: 0.1em 0.3em;
+}
+
+ol.kyujin_list{
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ol.kyujin_list{
+    padding-left: 1em;
+}
+
+li.kyujin_list{
+    text-indent: -1.3em;
+    padding-left: 1.3em;
+}
+
+li.kyujin_list:before{
+    counter-increment: item;
+    content: counter(item)'.';
+    /* 以下は自由に装飾... */
+    padding-right: .5em;
+    font-weight: bold;
+}
+
+table.search-list-box{
+    margin: 0 0 25px;
+}
+
+#reload {
+    width: 100px;
+    margin: 3px 0 3px 5px;
+    padding:3px 15px 3px 15px;
+    background:#EEE;
+    border:2px solid #CCC;
+}
